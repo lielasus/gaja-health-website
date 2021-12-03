@@ -1,0 +1,611 @@
+// vars
+$font-sans-serif : 'Roboto Condensed', sans-serif;
+$font-serif      : 'Playfair Display', serif;
+
+
+//Color Variables
+$primary:#00abb7;
+$secondary:#1f3b5f;
+$default: #999999;
+$darkgray: #363636;
+$gaja-blue: #203147;
+$gaja-pink: #FC6D73;
+$text-dark: #212529;
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+a:hover{
+  color: $gaja-pink;
+  text-decoration: none;
+}
+
+//Navbar
+
+.navbar{
+  -webkit-box-shadow: 0px 6px 10px rgba(19, 19, 19, 0.13);
+  -moz-box-shadow:    0px 6px 10px rgba(19, 19, 19, 0.13);
+  box-shadow:         0px 6px 10px rgba(19, 19, 19, 0.13);
+  z-index:999;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #333333;
+  text-decoration: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.nav-link:focus, .nav-link:hover {
+  color: #00abb7;
+}
+
+.navbar-dark {
+  background-color: $primary;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../img/menu-icon.png);
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    box-shadow: 0 0 0 0.1rem $secondary; 
+}
+
+//body
+
+body {
+    p {
+		color: #444;
+		font-family: $font-sans-serif;
+		font-size: 1.1em;
+        font-weight: 300;
+        text-align: left;
+	}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #444;
+}
+}
+
+//Hero
+
+.banner-bg-image {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  // needed to prevent janky scrolling in Safari
+  backface-visibility: hidden;
+  //100% height of the viewport
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	
+	@media screen and (min-width:640px) {
+		background-position: 50% 0;
+	}
+
+	// Add a slight overlay on our image
+	&:after {
+		background-color: rgba(37,58,95,.5);
+		bottom: 0;
+		content: '';
+		left: -2000%;
+		position: absolute;
+		right: -2000%;
+		top: 0;
+		z-index: 1;
+	}
+}
+
+.banner-bg-image-container {
+	box-sizing: border-box;
+	height: auto;
+	padding: 30px 50px;
+	position: relative;
+	z-index: 2;
+  
+  // set our fade for when the JS kicks in on scroll
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+	
+	@media screen and (min-width:640px) {
+		height: 100%;
+	}
+
+	p {
+		color: #ffffff;
+		font-family: $font-sans-serif;
+		font-size: 1.2em;
+        font-weight: 300;
+        text-align: left;
+	}
+}
+
+.sm-hero {
+  min-height: 32vh;
+  background: #000 url(../img/alameda-county.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 40px 50px;
+
+	p {
+		color: white;
+		font-family: $font-sans-serif;
+		font-size: 13px;
+        font-weight: bold;
+		letter-spacing: 6px;
+        opacity: 0.8;
+        text-transform: uppercase;
+        text-align: left;
+	}
+
+}
+.sm-hero:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(62,92,135,.7);
+}
+.sm-hero-content {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+}
+
+.sm-hero-title {
+	color: white;
+	font-family: $font-serif;
+  // Respond to viewport width–works well since
+  // we're sizing the image according viewport height
+	font-size: 17vw; 
+	font-weight: 500;
+	letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 5px 0;
+  text-align: left;
+  width: 85%;
+  
+  @media screen and (min-width:640px) {
+		font-size: 10vw;
+	}
+}
+
+.hero {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+  // needed to prevent janky scrolling in Safari
+  backface-visibility: hidden;
+  //100% height of the viewport
+	height: 40vh;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	
+	@media screen and (min-width:640px) {
+		background-position: 10% 0;
+    height: 55vh;
+	}
+
+	// Add a slight overlay on our image
+	&:after {
+		background-color: rgba(62,92,135,.5);
+		bottom: 0;
+		content: '';
+		left: -2000%;
+		position: absolute;
+		right: -2000%;
+		top: 0;
+		z-index: 1;
+	}
+}
+
+.hero-container {
+	box-sizing: border-box;
+	height: auto;
+	padding: 100px 50px 0px 50px;
+	position: relative;
+	z-index: 2;
+  
+  // set our fade for when the JS kicks in on scroll
+  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    -webkit-transition-duration: 1.2s;
+    transition-duration: 1.2s;
+	
+	@media screen and (min-width:640px) {
+		height: 100%;
+	}
+
+	p {
+		color: white;
+		font-family: $font-sans-serif;
+		font-size: 13px;
+        font-weight: bold;
+		letter-spacing: 6px;
+        opacity: 0.8;
+        text-transform: uppercase;
+        text-align: left;
+	}
+}
+
+.hero-button {
+  background: rgba(255,255,255,0.8);
+  color: #44575b;
+  font-size: 24px;
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  padding: 20px 90px;
+  text-decoration: none;
+}
+
+.hero-title {
+	color: rgb(255, 255, 255);
+	font-family: $font-serif;
+  // Respond to viewport width–works well since
+  // we're sizing the image according viewport height
+	font-size: 7vw; 
+	font-weight: 500;
+	letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 20px 0 0 0;
+  text-align: left;
+  width: 85%;
+  
+  @media screen and (min-width:640px) {
+		font-size: 8vw;
+	}
+}
+
+// PRIMARY BUTTONS
+
+.btn-outline-primary {
+  color: $primary;
+    border-color:$primary;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+ 
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary;
+}
+
+
+.content-dark-bg {
+  background-color: $secondary;
+    color: rgb(255, 255, 255);
+    p {
+        color: rgb(255, 255, 255);
+    }
+    .h1, .h2, .h3 .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+}
+
+.lightgray-bg {
+  background-color:#f3f3f3;
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+  }
+  .title{
+    color: #a5a5a5;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-kerning: normal;
+  }
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.main-content {
+  height: auto;
+    padding: 40px 50px;
+position: relative;
+  width: 60%;
+}
+
+.main-content p {
+  color: #25373D;
+  font-family: $font-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+// Start Animation Tweaks
+// Need to refactory and Sassify–just proof-of-concept and testing right now
+// Basically tweaking transform, translates inside keyframes and adding delays
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-12px, 0, 0);
+    //transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-12px, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.animate {
+    animation-duration: 0.75s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.2, 0.3, 0.25, 0.9);
+}
+
+.delay {
+  animation-delay: 1s;
+}
+
+.delay-400 {
+  animation-delay: 0.4s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-600 {
+  animation-delay: 0.6s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+.delay-800 {
+  animation-delay: 0.8s;
+}
+
+//FEATURE
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
+  
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  .feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: .75rem;
+  }
+  
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+  }
+  .icon-link > .bi {
+    margin-top: .125rem;
+    margin-left: .125rem;
+    transition: transform .25s ease-in-out;
+    fill: currentColor;
+  }
+  .icon-link:hover > .bi {
+    transform: translate(.25rem);
+  }
+  
+  .icon-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: .75rem;
+  }
+  
+  .rounded-4 { border-radius: .5rem; }
+  .rounded-5 { border-radius: 1rem; }
+  
+  .text-shadow-1 { text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25); }
+  .text-shadow-2 { text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25); }
+  .text-shadow-3 { text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25); }
+  
+  .card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  // PANELS FOR FAQ
+
+  .wrapper{
+    width:100%;
+  }
+  
+  @media(max-width:992px){
+   .wrapper{
+    width:100%;
+  } 
+  }
+  
+  .panel-heading {
+    padding: 0;
+    border:0;
+  }
+  
+  .panel-title>a, .panel-title>a:active{
+    display:block;
+    padding:22px 15px 22px 15px;
+    color:#333;
+    font-size:18px;
+    font-weight:normal;
+  
+    text-decoration:none;
+  }
+  .panel-heading  a:before {
+     font-family: 'Glyphicons Halflings';
+     content: "\e114";
+     float: right;
+     transition: all 0.5s;
+  }
+  .panel-heading.active a:before {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+
+
+//FOOTER
+
+.footer-dark {
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color: $gaja-blue;
+
+    .h1, .h2, .h3 .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark p {
+    color: #ffffff;
+    font-family: $font-sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    opacity: 0.8;
+    text-align: left;
+}
+
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:36px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+    margin:0 8px;
+    color:#fff;
+    opacity:0.75;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
