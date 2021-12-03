@@ -73,60 +73,55 @@ body {
 }
 }
 
-//Hero
-
-.banner-bg-image {
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-  // needed to prevent janky scrolling in Safari
-  backface-visibility: hidden;
-  //100% height of the viewport
-	height: 100vh;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	
-	@media screen and (min-width:640px) {
-		background-position: 50% 0;
-	}
-
-	// Add a slight overlay on our image
-	&:after {
-		background-color: rgba(37,58,95,.5);
-		bottom: 0;
-		content: '';
-		left: -2000%;
-		position: absolute;
-		right: -2000%;
-		top: 0;
-		z-index: 1;
-	}
-}
-
-.banner-bg-image-container {
-	box-sizing: border-box;
-	height: auto;
-	padding: 30px 50px;
-	position: relative;
-	z-index: 2;
-  
-  // set our fade for when the JS kicks in on scroll
-  -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    -webkit-transition-duration: 1.2s;
-    transition-duration: 1.2s;
-	
-	@media screen and (min-width:640px) {
-		height: 100%;
-	}
+.home-hero {
+  min-height: 32vh;
+  background: #000 url(../img/gaja-hero.png) center center no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 40px 50px;
 
 	p {
-		color: #ffffff;
+		color: white;
 		font-family: $font-sans-serif;
-		font-size: 1.2em;
-        font-weight: 300;
+		font-size: 13px;
+        font-weight: bold;
+		letter-spacing: 6px;
+        opacity: 0.8;
+        text-transform: uppercase;
         text-align: left;
+	}
+
+}
+.home-hero:before {
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(62,92,135,.5);
+}
+.home-hero-content {
+  position: absolute;
+  bottom: 15px;
+  color: #fff;
+}
+
+.home-hero-title {
+	color: white;
+	font-family: $font-serif;
+  // Respond to viewport width–works well since
+  // we're sizing the image according viewport height
+	font-size: 17vw; 
+	font-weight: 500;
+	letter-spacing: 1px;
+  line-height: 1.1;
+  margin: 5px 0;
+  text-align: left;
+  width: 85%;
+  
+  @media screen and (min-width:640px) {
+		font-size: 10vw;
 	}
 }
 
