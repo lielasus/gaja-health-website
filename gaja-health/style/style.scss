@@ -2,8 +2,7 @@
 $font-sans-serif : 'Roboto Condensed', sans-serif;
 $font-serif      : 'Playfair Display', serif;
 
-
-//Color Variables
+//VARIABLES: COLORS
 $primary:#00abb7;
 $secondary:#1f3b5f;
 $default: #999999;
@@ -11,6 +10,8 @@ $darkgray: #363636;
 $gaja-blue: #203147;
 $gaja-pink: #FC6D73;
 $text-dark: #212529;
+
+  // TYPOGRAPHY: LINKS
 
 a {
   color: $primary;
@@ -22,7 +23,7 @@ a:hover{
   text-decoration: none;
 }
 
-//Navbar
+//  NAVBAR
 
 .navbar{
   -webkit-box-shadow: 0px 6px 10px rgba(19, 19, 19, 0.13);
@@ -57,7 +58,7 @@ a:hover{
     box-shadow: 0 0 0 0.1rem $secondary; 
 }
 
-//body
+//  BODY
 
 body {
     p {
@@ -67,11 +68,12 @@ body {
         font-weight: 300;
         text-align: left;
 	}
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: #444;
+  }
+}
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  color: #444;
-}
-}
+// HERO IMAGE: HOMEPAGE
 
 .home-hero {
   min-height: 32vh;
@@ -124,6 +126,8 @@ body {
 		font-size: 10vw;
 	}
 }
+
+// HERO IMAGE: APPLY PAGE
 
 .sm-hero {
   min-height: 32vh;
@@ -266,86 +270,7 @@ body {
 	}
 }
 
-// PRIMARY BUTTONS
-
-.btn-outline-primary {
-  color: $primary;
-    border-color:$primary;
-}
-
-.btn-outline-primary:hover {
-  color: #fff;
-  background-color: $primary;
-  border-color: $primary;
-}
-
-.btn-outline-primary:focus, .btn-outline-primary.focus {
-  box-shadow: 0 0 0 0.2rem $primary;
-}
-
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
- 
-.show > .btn-outline-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.2rem $primary;
-}
-
-
-.content-dark-bg {
-  background-color: $secondary;
-    color: rgb(255, 255, 255);
-    p {
-        color: rgb(255, 255, 255);
-    }
-    .h1, .h2, .h3 .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-      color: #fff;
-    }
-}
-
-.lightgray-bg {
-  background-color:#f3f3f3;
-    .lead {
-      font-size: 1.25rem;
-      font-weight: 300;
-  }
-  .title{
-    color: #a5a5a5;
-    text-transform: uppercase;
-    font-size: .7rem;
-    font-kerning: normal;
-  }
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-}
-
-.main-content {
-  height: auto;
-    padding: 40px 50px;
-position: relative;
-  width: 60%;
-}
-
-.main-content p {
-  color: #25373D;
-  font-family: $font-serif;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
 // Start Animation Tweaks
-// Need to refactory and Sassify–just proof-of-concept and testing right now
-// Basically tweaking transform, translates inside keyframes and adding delays
 
 @keyframes fadeInLeft {
   from {
@@ -395,6 +320,88 @@ position: relative;
 
 .delay-800 {
   animation-delay: 0.8s;
+}
+
+// GAJA BUTTONS
+
+.btn-outline-primary {
+  color: $primary;
+    border-color:$primary;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem $primary;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+ 
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem $primary;
+}
+
+  // THE BLUE BANNER
+
+.content-dark-bg {
+  background-color: $secondary;
+    color: rgb(255, 255, 255);
+    p {
+        color: rgb(255, 255, 255);
+    }
+    .h1, .h2, .h3 .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+      color: #fff;
+    }
+}
+
+  // LIGHT GRAY SECTION
+
+.lightgray-bg {
+  background-color:#f3f3f3;
+    .lead {
+      font-size: 1.25rem;
+      font-weight: 300;
+  }
+  .title{
+    color: #a5a5a5;
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-kerning: normal;
+  }
+}
+
+  // WHAT IS THIS?
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.main-content {
+  height: auto;
+    padding: 40px 50px;
+position: relative;
+  width: 60%;
+}
+
+.main-content p {
+  color: #25373D;
+  font-family: $font-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
 //FEATURE
@@ -461,7 +468,26 @@ position: relative;
     background-size: cover;
   }
 
-  // PANELS FOR FAQ
+  // FOR ADVOCATE IMAGES ON HOMEPAGE
+
+  .advocates {
+    width: 23%;
+    float: left;
+
+    p {
+      text-align: center;
+      font-size: 1em;
+    }
+  }
+  .advocate-img {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    max-height: 150px;
+    max-width: 150px;
+  }
+  
+  // PANELS FOR FAQ (NOT USED)
 
   .wrapper{
     width:100%;
@@ -498,7 +524,6 @@ position: relative;
     -moz-transform: rotate(180deg);
     transform: rotate(180deg);
   }
-
 
 //FOOTER
 
