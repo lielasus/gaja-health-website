@@ -8,6 +8,26 @@ a:hover {
   text-decoration: none;
 }
 
+body p {
+  color: #444;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: left;
+}
+
+body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
+  color: #444;
+}
+
+.how li {
+  color: #444;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  text-align: left;
+}
+
 .navbar {
   -webkit-box-shadow: 0px 6px 10px rgba(19, 19, 19, 0.13);
   box-shadow: 0px 6px 10px rgba(19, 19, 19, 0.13);
@@ -40,18 +60,6 @@ a:hover {
 .navbar-toggler-icon:focus {
   -webkit-box-shadow: 0 0 0 0.1rem #1f3b5f;
           box-shadow: 0 0 0 0.1rem #1f3b5f;
-}
-
-body p {
-  color: #444;
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
-  text-align: left;
-}
-
-body .h1, body .h2, body .h3, body .h4, body .h5, body .h6, body h1, body h2, body h3, body h4, body h5, body h6 {
-  color: #444;
 }
 
 .home-hero {

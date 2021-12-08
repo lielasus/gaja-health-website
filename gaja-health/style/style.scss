@@ -23,6 +23,33 @@ a:hover{
   text-decoration: none;
 }
 
+//  TYPOGRAPHY: BODY
+
+body {
+  p {
+  color: #444;
+  font-family: $font-sans-serif;
+  font-size: 1.1em;
+      font-weight: 300;
+      text-align: left;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #444;
+}
+}
+
+.how {
+li {
+color: #444;
+font-family: $font-sans-serif;
+font-size: 1.1em;
+    font-weight: 300;
+    text-align: left;
+}
+}
+
+
 //  NAVBAR
 
 .navbar{
@@ -58,20 +85,7 @@ a:hover{
     box-shadow: 0 0 0 0.1rem $secondary; 
 }
 
-//  BODY
 
-body {
-    p {
-		color: #444;
-		font-family: $font-sans-serif;
-		font-size: 1.1em;
-        font-weight: 300;
-        text-align: left;
-	}
-  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    color: #444;
-  }
-}
 
 // HERO IMAGE: HOMEPAGE
 
